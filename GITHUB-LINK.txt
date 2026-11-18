@@ -1,0 +1,19 @@
+Lakeview Skills Institute SIMIS — GitHub Repository
+=====================================================
+
+Source Code:
+https://github.com/akizzaaaron-creator/lakeview-simis
+
+How to run locally:
+1. Copy the project folder to C:\xampp\htdocs\simis\
+2. Open phpMyAdmin and create database: simis_lakeview
+3. Import database/schema.sql then database/seed.sql
+4. Open http://localhost/simis/ in your browser
+
+Demo login credentials (password for all accounts: password)
+-------------------------------------------------------------
+admin        - Administrator
+admissions   - Admissions Officer
+finance      - Finance Officer
+academic     - Academic Officer
+management   - Management

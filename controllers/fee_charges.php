@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 if (!defined('APP_RUNNING')) { http_response_code(403); exit; }
 /**
- * controllers/fee_charges.php — Fee charge CRUD + balances overview.
+ * controllers/fee_charges.php - Fee charge CRUD + balances overview.
  */
 $action = $_GET['action'] ?? 'index';
 $id     = isset($_GET['id']) ? (int)$_GET['id'] : 0;

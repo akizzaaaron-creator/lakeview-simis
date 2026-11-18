@@ -1,4 +1,4 @@
-<?php /** @var array $enrolments @var array $programmes @var string $status @var int $progId @var bool $canManage */ ?>
+﻿<?php /** @var array $enrolments @var array $programmes @var string $status @var int $progId @var bool $canManage */ ?>
 
 <div class="page-header">
   <h4>Enrolments</h4>
@@ -18,7 +18,7 @@
         <option value="0">All programmes</option>
         <?php foreach ($programmes as $p): ?>
           <option value="<?= (int)$p['programme_id'] ?>" <?= $progId === (int)$p['programme_id'] ? 'selected' : '' ?>>
-            <?= e($p['programme_code']) ?> — <?= e($p['programme_name']) ?>
+            <?= e($p['programme_code']) ?> - <?= e($p['programme_name']) ?>
           </option>
         <?php endforeach; ?>
       </select>

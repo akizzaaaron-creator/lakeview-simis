@@ -1,4 +1,4 @@
-<?php /** @var array $payments @var array $students @var int $studentId @var string $method @var float $totalPaid @var bool $canManage */ ?>
+﻿<?php /** @var array $payments @var array $students @var int $studentId @var string $method @var float $totalPaid @var bool $canManage */ ?>
 
 <div class="page-header">
   <h4>Payments</h4>
@@ -23,7 +23,7 @@
         <option value="0">All students</option>
         <?php foreach ($students as $st): ?>
           <option value="<?= (int)$st['student_id'] ?>" <?= $studentId === (int)$st['student_id'] ? 'selected' : '' ?>>
-            <?= e($st['student_no']) ?> — <?= e($st['full_name']) ?>
+            <?= e($st['student_no']) ?> - <?= e($st['full_name']) ?>
           </option>
         <?php endforeach; ?>
       </select>
@@ -58,7 +58,7 @@
         <tbody>
           <?php foreach ($payments as $p): ?>
           <tr>
-            <td><code><?= e($p['reference_no'] ?: '—') ?></code></td>
+            <td><code><?= e($p['reference_no'] ?: '-') ?></code></td>
             <td>
               <a href="<?= APP_URL ?>/index.php?page=students&action=show&id=<?= (int)$p['student_id'] ?>"
                  class="fw-semibold"><?= e($p['student_no']) ?></a>

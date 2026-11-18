@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 if (!defined('APP_RUNNING')) { http_response_code(403); exit; }
 /**
- * controllers/reports.php — Cross-module summary reports.
+ * controllers/reports.php - Cross-module summary reports.
  */
 $action = $_GET['action'] ?? 'index';
 require_permission('reports', 'view');

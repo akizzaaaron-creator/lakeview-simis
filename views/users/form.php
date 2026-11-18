@@ -1,4 +1,4 @@
-<?php /** @var array $old @var array $errors @var bool $editing @var int $currentUserId */ ?>
+﻿<?php /** @var array $old @var array $errors @var bool $editing @var int $currentUserId */ ?>
 <div class="d-flex justify-content-between align-items-center mb-3">
   <h4 class="mb-0"><?= $editing ? 'Edit User' : 'Add User' ?></h4>
   <a href="<?= APP_URL ?>/index.php?page=users" class="btn btn-outline-secondary btn-sm"><i class="bi-arrow-left me-1"></i>Back</a>
@@ -34,7 +34,7 @@
       <div class="col-md-6">
         <label class="form-label required">Role</label>
         <select name="role" class="form-select <?= isset($errors['role']) ? 'is-invalid' : '' ?>">
-          <option value="">— select role —</option>
+          <option value="">- select role -</option>
           <?php foreach (ROLES as $k => $lbl): ?>
             <option value="<?= e($k) ?>" <?= ($old['role'] ?? '') === $k ? 'selected' : '' ?>><?= e($lbl) ?></option>
           <?php endforeach; ?>

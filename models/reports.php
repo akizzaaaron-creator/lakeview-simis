@@ -1,5 +1,5 @@
-<?php
-/** models/reports.php — Cross-module aggregate queries for the Reports module. */
+﻿<?php
+/** models/reports.php - Cross-module aggregate queries for the Reports module. */
 
 function report_enrolment_by_programme(): array {
     return programme_enrolment_counts();

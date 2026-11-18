@@ -1,4 +1,4 @@
-<?php /** @var array $old @var array $errors @var bool $editing @var array $students @var array $charges */ ?>
+﻿<?php /** @var array $old @var array $errors @var bool $editing @var array $students @var array $charges */ ?>
 <div class="d-flex justify-content-between align-items-center mb-3">
   <h4 class="mb-0"><?= $editing ? 'Edit Payment' : 'Record Payment' ?></h4>
   <a href="<?= APP_URL ?>/index.php?page=payments" class="btn btn-outline-secondary btn-sm"><i class="bi-arrow-left me-1"></i>Back</a>
@@ -11,9 +11,9 @@
       <div class="col-md-6">
         <label class="form-label required">Student</label>
         <select name="student_id" id="studentSelect" class="form-select <?= isset($errors['student_id']) ? 'is-invalid' : '' ?>">
-          <option value="">— select student —</option>
+          <option value="">- select student -</option>
           <?php foreach ($students as $st): ?>
-            <option value="<?= (int)$st['student_id'] ?>" <?= (int)($old['student_id'] ?? 0) === (int)$st['student_id'] ? 'selected' : '' ?>><?= e($st['student_no']) ?> — <?= e($st['full_name']) ?></option>
+            <option value="<?= (int)$st['student_id'] ?>" <?= (int)($old['student_id'] ?? 0) === (int)$st['student_id'] ? 'selected' : '' ?>><?= e($st['student_no']) ?> - <?= e($st['full_name']) ?></option>
           <?php endforeach; ?>
         </select>
         <?= err('student_id', $errors) ?>
@@ -22,7 +22,7 @@
       <div class="col-md-6">
         <label class="form-label">Allocate to Fee Charge (optional)</label>
         <select name="fee_charge_id" class="form-select">
-          <option value="">— general payment / not allocated —</option>
+          <option value="">- general payment / not allocated -</option>
           <?php foreach ($charges as $c): ?>
             <option value="<?= (int)$c['fee_charge_id'] ?>" <?= (int)($old['fee_charge_id'] ?? 0) === (int)$c['fee_charge_id'] ? 'selected' : '' ?>><?= e($c['description'] ?: $c['charge_type']) ?> (<?= money($c['amount']) ?>, <?= e($c['status']) ?>)</option>
           <?php endforeach; ?>

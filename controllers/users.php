@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 if (!defined('APP_RUNNING')) { http_response_code(403); exit; }
 /**
- * controllers/users.php — System user management. Administrator only.
+ * controllers/users.php - System user management. Administrator only.
  */
 $action = $_GET['action'] ?? 'index';
 $id     = isset($_GET['id']) ? (int)$_GET['id'] : 0;

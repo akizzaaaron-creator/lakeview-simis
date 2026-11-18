@@ -1,5 +1,5 @@
-<?php
-/** models/fee_charge.php — Fee charge data access. */
+﻿<?php
+/** models/fee_charge.php - Fee charge data access. */
 
 function fee_charge_all(?int $studentId = null, ?string $status = null): array {
     $sql = "SELECT fc.*, s.student_no, s.full_name

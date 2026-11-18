@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 if (!defined('APP_RUNNING')) { http_response_code(403); exit; }
 /**
- * controllers/dashboard.php — role-aware overview dashboard.
+ * controllers/dashboard.php - role-aware overview dashboard.
  */
 require_permission('dashboard');
 

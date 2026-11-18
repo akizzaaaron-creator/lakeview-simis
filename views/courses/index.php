@@ -1,4 +1,4 @@
-<?php /** @var array $courses @var array $programmes @var int $progFilter @var bool $canManage */ ?>
+﻿<?php /** @var array $courses @var array $programmes @var int $progFilter @var bool $canManage */ ?>
 
 <div class="page-header">
   <h4>Courses</h4>
@@ -18,7 +18,7 @@
         <option value="0">All programmes</option>
         <?php foreach ($programmes as $p): ?>
           <option value="<?= (int)$p['programme_id'] ?>" <?= $progFilter === (int)$p['programme_id'] ? 'selected' : '' ?>>
-            <?= e($p['programme_code']) ?> — <?= e($p['programme_name']) ?>
+            <?= e($p['programme_code']) ?> - <?= e($p['programme_name']) ?>
           </option>
         <?php endforeach; ?>
       </select>

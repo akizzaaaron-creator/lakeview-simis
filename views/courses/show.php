@@ -1,7 +1,7 @@
-<?php /** @var array $course @var array $assessments @var bool $canManage @var bool $canManageAssessments */ $c = $course; ?>
+﻿<?php /** @var array $course @var array $assessments @var bool $canManage @var bool $canManageAssessments */ $c = $course; ?>
 <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
   <div><h4 class="mb-0"><code><?= e($c['course_code']) ?></code> <?= e($c['course_name']) ?></h4>
-    <span class="text-muted">Programme: <?= e($c['programme_name']) ?> &middot; Semester <?= (int)$c['semester'] ?> &middot; <?= (int)$c['credit_units'] ?> credits &middot; <?= status_badge($c['status']) ?></span></div>
+    <span class="text-muted">Programme: <?= e($c['programme_name']) ?> | Semester <?= (int)$c['semester'] ?> | <?= (int)$c['credit_units'] ?> credits | <?= status_badge($c['status']) ?></span></div>
   <div class="d-flex gap-2">
     <a href="<?= APP_URL ?>/index.php?page=courses" class="btn btn-outline-secondary btn-sm"><i class="bi-arrow-left me-1"></i>Back</a>
     <?php if ($canManage): ?><a href="<?= APP_URL ?>/index.php?page=courses&action=edit&id=<?= (int)$c['course_id'] ?>" class="btn btn-outline-primary btn-sm"><i class="bi-pencil me-1"></i>Edit</a><?php endif; ?>

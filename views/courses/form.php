@@ -1,4 +1,4 @@
-<?php /** @var array $course @var array $old @var array $errors @var bool $editing @var array $programmes */ ?>
+﻿<?php /** @var array $course @var array $old @var array $errors @var bool $editing @var array $programmes */ ?>
 <div class="d-flex justify-content-between align-items-center mb-3">
   <h4 class="mb-0"><?= $editing ? 'Edit Course' : 'Add Course' ?></h4>
   <a href="<?= APP_URL ?>/index.php?page=courses" class="btn btn-outline-secondary btn-sm"><i class="bi-arrow-left me-1"></i>Back</a>
@@ -21,9 +21,9 @@
       <div class="col-md-3">
         <label class="form-label required">Programme</label>
         <select name="programme_id" class="form-select <?= isset($errors['programme_id']) ? 'is-invalid' : '' ?>">
-          <option value="">— select —</option>
+          <option value="">- select -</option>
           <?php foreach ($programmes as $p): ?>
-            <option value="<?= (int)$p['programme_id'] ?>" <?= (int)($old['programme_id'] ?? 0) === (int)$p['programme_id'] ? 'selected' : '' ?>><?= e($p['programme_code']) ?> — <?= e($p['programme_name']) ?></option>
+            <option value="<?= (int)$p['programme_id'] ?>" <?= (int)($old['programme_id'] ?? 0) === (int)$p['programme_id'] ? 'selected' : '' ?>><?= e($p['programme_code']) ?> - <?= e($p['programme_name']) ?></option>
           <?php endforeach; ?>
         </select>
         <?= err('programme_id', $errors) ?>

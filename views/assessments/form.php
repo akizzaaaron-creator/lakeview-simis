@@ -1,4 +1,4 @@
-<?php /** @var array $old @var array $errors @var bool $editing @var array $courses */ ?>
+﻿<?php /** @var array $old @var array $errors @var bool $editing @var array $courses */ ?>
 <div class="d-flex justify-content-between align-items-center mb-3">
   <h4 class="mb-0"><?= $editing ? 'Edit Assessment' : 'Add Assessment' ?></h4>
   <a href="<?= APP_URL ?>/index.php?page=assessments" class="btn btn-outline-secondary btn-sm"><i class="bi-arrow-left me-1"></i>Back</a>
@@ -11,9 +11,9 @@
       <div class="col-md-6">
         <label class="form-label required">Course</label>
         <select name="course_id" class="form-select <?= isset($errors['course_id']) ? 'is-invalid' : '' ?>">
-          <option value="">— select course —</option>
+          <option value="">- select course -</option>
           <?php foreach ($courses as $c): ?>
-            <option value="<?= (int)$c['course_id'] ?>" <?= (int)($old['course_id'] ?? 0) === (int)$c['course_id'] ? 'selected' : '' ?>><?= e($c['course_code']) ?> — <?= e($c['course_name']) ?></option>
+            <option value="<?= (int)$c['course_id'] ?>" <?= (int)($old['course_id'] ?? 0) === (int)$c['course_id'] ? 'selected' : '' ?>><?= e($c['course_code']) ?> - <?= e($c['course_name']) ?></option>
           <?php endforeach; ?>
         </select>
         <?= err('course_id', $errors) ?>

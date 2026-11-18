@@ -1,4 +1,4 @@
-<?php /** @var array $student @var array $old @var array $errors @var bool $editing */ ?>
+﻿<?php /** @var array $student @var array $old @var array $errors @var bool $editing */ ?>
 
 <div class="page-header">
   <h4><?= $editing ? 'Edit Student' : 'Register Student' ?></h4>
@@ -32,7 +32,7 @@
         <div class="col-md-3">
           <label class="form-label">Gender</label>
           <select name="gender" class="form-select">
-            <option value="">—</option>
+            <option value="">-</option>
             <?php foreach (['male', 'female', 'other'] as $g): ?>
               <option value="<?= $g ?>" <?= ($old['gender'] ?? '') === $g ? 'selected' : '' ?>><?= ucfirst($g) ?></option>
             <?php endforeach; ?>

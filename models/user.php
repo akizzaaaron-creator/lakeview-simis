@@ -1,5 +1,5 @@
-<?php
-/** models/user.php — System user data access. Passwords always hashed. */
+﻿<?php
+/** models/user.php - System user data access. Passwords always hashed. */
 
 function user_all(): array {
     return db()->query("SELECT user_id, username, full_name, email, role, status, created_at FROM user ORDER BY full_name")->fetchAll();

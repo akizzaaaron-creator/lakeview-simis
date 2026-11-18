@@ -1,4 +1,4 @@
-<?php /** @var array $old @var array $errors @var bool $editing @var array $students */ ?>
+﻿<?php /** @var array $old @var array $errors @var bool $editing @var array $students */ ?>
 <div class="d-flex justify-content-between align-items-center mb-3">
   <h4 class="mb-0"><?= $editing ? 'Edit Fee Charge' : 'Add Fee Charge' ?></h4>
   <a href="<?= APP_URL ?>/index.php?page=fee_charges" class="btn btn-outline-secondary btn-sm"><i class="bi-arrow-left me-1"></i>Back</a>
@@ -11,9 +11,9 @@
       <div class="col-md-6">
         <label class="form-label required">Student</label>
         <select name="student_id" class="form-select <?= isset($errors['student_id']) ? 'is-invalid' : '' ?>">
-          <option value="">— select student —</option>
+          <option value="">- select student -</option>
           <?php foreach ($students as $st): ?>
-            <option value="<?= (int)$st['student_id'] ?>" <?= (int)($old['student_id'] ?? 0) === (int)$st['student_id'] ? 'selected' : '' ?>><?= e($st['student_no']) ?> — <?= e($st['full_name']) ?></option>
+            <option value="<?= (int)$st['student_id'] ?>" <?= (int)($old['student_id'] ?? 0) === (int)$st['student_id'] ? 'selected' : '' ?>><?= e($st['student_no']) ?> - <?= e($st['full_name']) ?></option>
           <?php endforeach; ?>
         </select>
         <?= err('student_id', $errors) ?>

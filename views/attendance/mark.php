@@ -1,4 +1,4 @@
-<?php /** @var array $courses @var int $courseId @var string $date @var array $students @var array $statusMap */ ?>
+﻿<?php /** @var array $courses @var int $courseId @var string $date @var array $students @var array $statusMap */ ?>
 <div class="d-flex justify-content-between align-items-center mb-3">
   <h4 class="mb-0">Mark Attendance</h4>
   <a href="<?= APP_URL ?>/index.php?page=attendance" class="btn btn-outline-secondary btn-sm"><i class="bi-arrow-left me-1"></i>Back</a>
@@ -11,9 +11,9 @@
     <div class="col-md-5">
       <label class="form-label small text-muted">Course</label>
       <select name="course_id" class="form-select form-select-sm" onchange="this.form.submit()">
-        <option value="0">— select course —</option>
+        <option value="0">- select course -</option>
         <?php foreach ($courses as $c): ?>
-          <option value="<?= (int)$c['course_id'] ?>" <?= $courseId === (int)$c['course_id'] ? 'selected' : '' ?>><?= e($c['course_code']) ?> — <?= e($c['course_name']) ?></option>
+          <option value="<?= (int)$c['course_id'] ?>" <?= $courseId === (int)$c['course_id'] ? 'selected' : '' ?>><?= e($c['course_code']) ?> - <?= e($c['course_name']) ?></option>
         <?php endforeach; ?>
       </select>
     </div>
@@ -28,7 +28,7 @@
 <?php if ($courseId): ?>
 <?php $course = course_find($courseId); ?>
 <div class="card"><div class="card-header d-flex justify-content-between">
-  <span><i class="bi-people me-1"></i>Enrolled Students — <code><?= e($course['course_code'] ?? '') ?></code> &middot; <?= e($course['course_name'] ?? '') ?> &middot; <?= e(fmt_date($date)) ?></span>
+  <span><i class="bi-people me-1"></i>Enrolled Students - <code><?= e($course['course_code'] ?? '') ?></code> | <?= e($course['course_name'] ?? '') ?> | <?= e(fmt_date($date)) ?></span>
   <span class="badge bg-secondary"><?= count($students) ?> students</span>
 </div>
 <div class="card-body p-0">

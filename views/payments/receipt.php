@@ -1,4 +1,4 @@
-<?php /** @var array $p */ ?>
+﻿<?php /** @var array $p */ ?>
 <div class="d-flex justify-content-between align-items-center mb-3 no-print">
   <h4 class="mb-0">Payment Receipt</h4>
   <div class="d-flex gap-2">
@@ -20,7 +20,7 @@
       <tbody>
         <tr><td class="text-muted" style="width:40%">Receipt No.</td><td><strong><?= e($p['reference_no'] ?: 'RCT-' . str_pad((string)$p['payment_id'], 4, '0', STR_PAD_LEFT)) ?></strong></td></tr>
         <tr><td class="text-muted">Date</td><td><?= e(fmt_date($p['payment_date'])) ?></td></tr>
-        <tr><td class="text-muted">Student</td><td><?= e($p['student_no']) ?> — <?= e($p['full_name']) ?></td></tr>
+        <tr><td class="text-muted">Student</td><td><?= e($p['student_no']) ?> - <?= e($p['full_name']) ?></td></tr>
         <tr><td class="text-muted">Contact</td><td><?= e($p['phone'] ?: '-') ?></td></tr>
         <tr><td class="text-muted">Allocated to</td><td><?= e($p['charge_desc'] ?: 'General payment') ?> <?= $p['charge_type'] ? '(' . e($p['charge_type']) . ')' : '' ?></td></tr>
         <tr><td class="text-muted">Method</td><td><?= e(ucfirst(str_replace('_',' ',$p['payment_method']))) ?></td></tr>

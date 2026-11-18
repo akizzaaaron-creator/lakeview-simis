@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 if (!defined('APP_RUNNING')) { http_response_code(403); exit; }
 /**
- * controllers/auth.php — login and logout.
+ * controllers/auth.php - login and logout.
  */
 if ($page === 'logout') {
     logout();

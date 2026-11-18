@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 if (!defined('APP_RUNNING')) { http_response_code(403); exit; }
 /**
- * controllers/results.php — Results: bulk score entry per assessment, transcript.
+ * controllers/results.php - Results: bulk score entry per assessment, transcript.
  */
 $action = $_GET['action'] ?? 'index';
 $id     = isset($_GET['id']) ? (int)$_GET['id'] : 0;

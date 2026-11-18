@@ -1,4 +1,4 @@
-<?php /** @var array $charges @var array $students @var int $studentId @var string $status @var float $totalCharged @var bool $canManage */ ?>
+﻿<?php /** @var array $charges @var array $students @var int $studentId @var string $status @var float $totalCharged @var bool $canManage */ ?>
 
 <div class="page-header">
   <h4>Fee Charges</h4>
@@ -29,7 +29,7 @@
         <option value="0">All students</option>
         <?php foreach ($students as $st): ?>
           <option value="<?= (int)$st['student_id'] ?>" <?= $studentId === (int)$st['student_id'] ? 'selected' : '' ?>>
-            <?= e($st['student_no']) ?> — <?= e($st['full_name']) ?>
+            <?= e($st['student_no']) ?> - <?= e($st['full_name']) ?>
           </option>
         <?php endforeach; ?>
       </select>
@@ -69,9 +69,9 @@
                  class="fw-semibold"><?= e($c['student_no']) ?></a>
               <br><small class="text-muted"><?= e($c['full_name']) ?></small>
             </td>
-            <td><?= e($c['description'] ?: '—') ?></td>
+            <td><?= e($c['description'] ?: '-') ?></td>
             <td><span class="badge bg-secondary"><?= e($c['charge_type']) ?></span></td>
-            <td><?= e($c['academic_year'] ?: '—') ?> / <?= $c['semester'] !== null ? (int)$c['semester'] : '—' ?></td>
+            <td><?= e($c['academic_year'] ?: '-') ?> / <?= $c['semester'] !== null ? (int)$c['semester'] : '-' ?></td>
             <td class="text-end fw-semibold"><?= money($c['amount']) ?></td>
             <td><?= e(fmt_date($c['due_date'])) ?></td>
             <td><?= status_badge($c['status']) ?></td>

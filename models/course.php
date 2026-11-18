@@ -1,5 +1,5 @@
-<?php
-/** models/course.php — Course data access. Each course belongs to one programme. */
+﻿<?php
+/** models/course.php - Course data access. Each course belongs to one programme. */
 
 function course_all(?int $programmeId = null): array {
     if ($programmeId) {

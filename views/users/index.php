@@ -1,4 +1,4 @@
-<?php /** @var array $users @var int $currentUserId */ ?>
+﻿<?php /** @var array $users @var int $currentUserId */ ?>
 
 <div class="page-header">
   <h4>User Management</h4>
@@ -23,7 +23,7 @@
               <?php if ($isMe): ?><span class="badge bg-accent ms-1">You</span><?php endif; ?>
             </td>
             <td class="fw-semibold"><?= e($u['full_name']) ?></td>
-            <td><?= e($u['email'] ?: '—') ?></td>
+            <td><?= e($u['email'] ?: '-') ?></td>
             <td><span class="badge bg-primary"><?= e(ROLES[$u['role']] ?? $u['role']) ?></span></td>
             <td><?= status_badge($u['status']) ?></td>
             <td><?= e(fmt_date($u['created_at'])) ?></td>

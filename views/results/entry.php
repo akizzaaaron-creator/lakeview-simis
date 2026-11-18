@@ -1,8 +1,8 @@
-<?php /** @var array $assessment @var array $students @var array $existing @var bool $canManage */ $a = $assessment; ?>
+﻿<?php /** @var array $assessment @var array $students @var array $existing @var bool $canManage */ $a = $assessment; ?>
 <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
   <div>
     <h4 class="mb-0">Enter Scores</h4>
-    <span class="text-muted"><code><?= e($a['course_code']) ?></code> <?= e($a['course_name']) ?> &middot; <?= e($a['title']) ?> <span class="badge bg-light text-dark"><?= e(strtoupper($a['assessment_type'])) ?></span> &middot; Max: <?= (float)$a['max_score'] ?></span>
+    <span class="text-muted"><code><?= e($a['course_code']) ?></code> <?= e($a['course_name']) ?> | <?= e($a['title']) ?> <span class="badge bg-light text-dark"><?= e(strtoupper($a['assessment_type'])) ?></span> | Max: <?= (float)$a['max_score'] ?></span>
   </div>
   <div class="d-flex gap-2">
     <a href="<?= APP_URL ?>/index.php?page=assessments" class="btn btn-outline-secondary btn-sm"><i class="bi-arrow-left me-1"></i>Assessments</a>
@@ -15,7 +15,7 @@
 <?php else: ?>
 <div class="card">
   <div class="card-header d-flex justify-content-between">
-    <span><i class="bi-pencil-square me-1"></i>Score Sheet &mdash; <?= e(fmt_date($a['date'])) ?></span>
+    <span><i class="bi-pencil-square me-1"></i>Score Sheet - <?= e(fmt_date($a['date'])) ?></span>
     <span class="text-muted small">Score range: 0 &ndash; <?= (float)$a['max_score'] ?></span>
   </div>
   <div class="card-body p-0">
@@ -43,12 +43,12 @@
                        name="score[<?= (int)$st['student_id'] ?>]"
                        class="form-control form-control-sm text-center"
                        value="<?= $curScore !== '' ? (float)$curScore : '' ?>"
-                       placeholder="—"
+                       placeholder="-"
                        <?= !$canManage ? 'readonly' : '' ?>></td>
             <td class="text-center">
               <?php if ($curGrade): ?>
                 <span class="badge <?= in_array($curGrade,['A','B'])?'bg-success':($curGrade==='F'?'bg-danger':'bg-secondary') ?>"><?= e($curGrade) ?></span>
-              <?php else: ?><span class="text-muted">—</span><?php endif; ?>
+              <?php else: ?><span class="text-muted">-</span><?php endif; ?>
             </td>
             <td><input type="text" name="remarks[<?= (int)$st['student_id'] ?>]"
                        class="form-control form-control-sm"

@@ -1,5 +1,5 @@
-<?php
-/** models/student.php — Student data access. */
+﻿<?php
+/** models/student.php - Student data access. */
 
 function student_all(?string $search = null, ?string $status = null, int $limit = 0): array {
     $sql = "SELECT s.*, pr.programme_code, pr.programme_name

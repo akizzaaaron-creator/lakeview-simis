@@ -1,4 +1,4 @@
-<?php /** @var array $students @var string $search @var string $status @var bool $canManage */ ?>
+﻿<?php /** @var array $students @var string $search @var string $status @var bool $canManage */ ?>
 
 <div class="page-header">
   <h4>Students</h4>
@@ -52,11 +52,11 @@
               <?php if ($s['programme_code']): ?>
                 <span class="badge bg-primary"><?= e($s['programme_code']) ?></span>
               <?php else: ?>
-                <span class="text-muted">—</span>
+                <span class="text-muted">-</span>
               <?php endif; ?>
             </td>
-            <td><?= e(ucfirst($s['gender'] ?? '') ?: '—') ?></td>
-            <td><?= e($s['phone'] ?: '—') ?></td>
+            <td><?= e(ucfirst($s['gender'] ?? '') ?: '-') ?></td>
+            <td><?= e($s['phone'] ?: '-') ?></td>
             <td><?= status_badge($s['status']) ?></td>
             <td><?= e(fmt_date($s['admission_date'])) ?></td>
             <td class="text-end">

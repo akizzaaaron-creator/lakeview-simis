@@ -1,5 +1,5 @@
-<?php
-/** models/programme.php — Programme data access. */
+﻿<?php
+/** models/programme.php - Programme data access. */
 
 function programme_all(): array {
     return db()->query("SELECT * FROM programme ORDER BY programme_code")->fetchAll();

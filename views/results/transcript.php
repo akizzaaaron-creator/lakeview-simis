@@ -1,4 +1,4 @@
-<?php /** @var array $student @var array $results @var array $enrolments */ $s = $student; ?>
+﻿<?php /** @var array $student @var array $results @var array $enrolments */ $s = $student; ?>
 <div class="d-flex justify-content-between align-items-center mb-3 no-print flex-wrap gap-2">
   <h4 class="mb-0">Academic Transcript</h4>
   <div class="d-flex gap-2">
@@ -12,7 +12,7 @@
     <div class="text-center mb-4">
       <i class="bi-mortarboard-fill text-primary" style="font-size:2rem"></i>
       <h5 class="mb-0"><?= e(APP_NAME) ?></h5>
-      <small class="text-muted">Academic Transcript &mdash; Official Copy</small>
+      <small class="text-muted">Academic Transcript - Official Copy</small>
     </div>
     <div class="row mb-4">
       <div class="col-md-6"><table class="table table-borderless table-sm mb-0">
@@ -24,7 +24,7 @@
       </table></div>
       <div class="col-md-6"><table class="table table-borderless table-sm mb-0">
         <?php foreach ($enrolments as $e): ?>
-        <tr><td class="text-muted" style="width:40%">Programme</td><td><?= e($e['programme_code']) ?> — <?= e($e['programme_name']) ?></td></tr>
+        <tr><td class="text-muted" style="width:40%">Programme</td><td><?= e($e['programme_code']) ?> - <?= e($e['programme_name']) ?></td></tr>
         <tr><td class="text-muted">Academic Year</td><td><?= e($e['academic_year']) ?> / Sem <?= (int)$e['semester'] ?></td></tr>
         <?php break; endforeach; ?>
       </table></div>
@@ -43,7 +43,7 @@
       <?php foreach ($byCourse as $code => $rows):
         $firstRow = $rows[0];
       ?>
-        <tr class="table-light"><td colspan="8"><strong><?= e($code) ?> — <?= e($firstRow['course_name']) ?></strong></td></tr>
+        <tr class="table-light"><td colspan="8"><strong><?= e($code) ?> - <?= e($firstRow['course_name']) ?></strong></td></tr>
         <?php foreach ($rows as $r):
           $pct = $r['max_score'] > 0 ? round($r['score'] / $r['max_score'] * 100, 1) : 0;
         ?>

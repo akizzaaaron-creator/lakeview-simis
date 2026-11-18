@@ -1,5 +1,5 @@
-<?php
-/** models/assessment.php — Assessment data access (assessments belong to a course). */
+﻿<?php
+/** models/assessment.php - Assessment data access (assessments belong to a course). */
 
 function assessment_all(?int $courseId = null): array {
     $sql = "SELECT a.*, c.course_code, c.course_name

@@ -1,7 +1,7 @@
-<?php /** @var array $programme @var array $courses @var array $enrolments @var bool $canManage @var bool $canManageCourses */ $p = $programme; ?>
+﻿<?php /** @var array $programme @var array $courses @var array $enrolments @var bool $canManage @var bool $canManageCourses */ $p = $programme; ?>
 <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
   <div><h4 class="mb-0"><code><?= e($p['programme_code']) ?></code> <?= e($p['programme_name']) ?></h4>
-    <span class="text-muted"><?= e($p['duration'] ?: '') ?> &middot; <?= status_badge($p['status']) ?></span></div>
+    <span class="text-muted"><?= e($p['duration'] ?: '') ?> | <?= status_badge($p['status']) ?></span></div>
   <div class="d-flex gap-2">
     <a href="<?= APP_URL ?>/index.php?page=programmes" class="btn btn-outline-secondary btn-sm"><i class="bi-arrow-left me-1"></i>Back</a>
     <?php if ($canManage): ?><a href="<?= APP_URL ?>/index.php?page=programmes&action=edit&id=<?= (int)$p['programme_id'] ?>" class="btn btn-outline-primary btn-sm"><i class="bi-pencil me-1"></i>Edit</a><?php endif; ?>

@@ -1,5 +1,5 @@
-<?php
-/** models/payment.php — Fee payment data access. */
+﻿<?php
+/** models/payment.php - Fee payment data access. */
 
 function payment_all(?int $studentId = null, ?string $method = null): array {
     $sql = "SELECT p.*, s.student_no, s.full_name, fc.description AS charge_desc, fc.charge_type

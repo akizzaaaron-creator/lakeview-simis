@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /** @var array $student @var array $enrolments @var float $charged @var float $paid @var float $balance
     @var array $charges @var array $payments @var array $att @var array $attRecords @var array $results @var bool $canManage */
 $s = $student;
@@ -7,7 +7,7 @@ $s = $student;
 <div class="page-header">
   <div>
     <h4><?= e($s['full_name']) ?></h4>
-    <span class="text-muted"><code><?= e($s['student_no']) ?></code> &nbsp;&middot;&nbsp; <?= status_badge($s['status']) ?></span>
+    <span class="text-muted"><code><?= e($s['student_no']) ?></code> &nbsp;|&nbsp; <?= status_badge($s['status']) ?></span>
   </div>
   <div class="d-flex gap-2">
     <a href="<?= APP_URL ?>/index.php?page=students" class="btn btn-outline-secondary btn-sm">
@@ -27,14 +27,14 @@ $s = $student;
       <div class="card-header">Personal Information</div>
       <div class="card-body">
         <dl class="row mb-0" style="font-size:.875rem">
-          <dt class="col-5 text-muted fw-normal">Gender</dt>      <dd class="col-7"><?= e(ucfirst($s['gender'] ?? '') ?: '—') ?></dd>
+          <dt class="col-5 text-muted fw-normal">Gender</dt>      <dd class="col-7"><?= e(ucfirst($s['gender'] ?? '') ?: '-') ?></dd>
           <dt class="col-5 text-muted fw-normal">Date of Birth</dt><dd class="col-7"><?= e(fmt_date($s['date_of_birth'])) ?></dd>
-          <dt class="col-5 text-muted fw-normal">Nationality</dt>  <dd class="col-7"><?= e($s['nationality'] ?: '—') ?></dd>
+          <dt class="col-5 text-muted fw-normal">Nationality</dt>  <dd class="col-7"><?= e($s['nationality'] ?: '-') ?></dd>
           <dt class="col-5 text-muted fw-normal">Admitted</dt>     <dd class="col-7"><?= e(fmt_date($s['admission_date'])) ?></dd>
-          <dt class="col-5 text-muted fw-normal">Phone</dt>        <dd class="col-7"><?= e($s['phone'] ?: '—') ?></dd>
-          <dt class="col-5 text-muted fw-normal">Email</dt>        <dd class="col-7"><?= e($s['email'] ?: '—') ?></dd>
-          <dt class="col-5 text-muted fw-normal">Address</dt>      <dd class="col-7"><?= e($s['address'] ?: '—') ?></dd>
-          <dt class="col-5 text-muted fw-normal">Emergency</dt>    <dd class="col-7"><?= e($s['emergency_contact_name'] ?: '—') ?> <?= e($s['emergency_contact_phone'] ?: '') ?></dd>
+          <dt class="col-5 text-muted fw-normal">Phone</dt>        <dd class="col-7"><?= e($s['phone'] ?: '-') ?></dd>
+          <dt class="col-5 text-muted fw-normal">Email</dt>        <dd class="col-7"><?= e($s['email'] ?: '-') ?></dd>
+          <dt class="col-5 text-muted fw-normal">Address</dt>      <dd class="col-7"><?= e($s['address'] ?: '-') ?></dd>
+          <dt class="col-5 text-muted fw-normal">Emergency</dt>    <dd class="col-7"><?= e($s['emergency_contact_name'] ?: '-') ?> <?= e($s['emergency_contact_phone'] ?: '') ?></dd>
         </dl>
       </div>
     </div>
@@ -139,7 +139,7 @@ $s = $student;
             <tr class="table-success">
               <td><i class="bi-check-circle text-success me-1"></i>Payment</td>
               <td class="text-end text-success fw-semibold">−<?= money($pm['amount']) ?></td>
-              <td><code><?= e($pm['reference_no'] ?: '—') ?></code><br>
+              <td><code><?= e($pm['reference_no'] ?: '-') ?></code><br>
                   <small class="text-muted"><?= e(fmt_date($pm['payment_date'])) ?></small></td>
             </tr>
             <?php endforeach; ?>

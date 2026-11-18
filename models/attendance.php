@@ -1,5 +1,5 @@
-<?php
-/** models/attendance.php — Attendance data access. */
+﻿<?php
+/** models/attendance.php - Attendance data access. */
 
 function attendance_all(?int $courseId = null, ?string $date = null, ?int $studentId = null): array {
     $sql = "SELECT a.*, s.student_no, s.full_name, c.course_code, c.course_name, u.full_name AS recorder
@@ -62,7 +62,7 @@ function attendance_rate(int $studentId, ?int $courseId = null): array {
     return ['present' => $present, 'total' => $total, 'rate' => $total ? round($present / $total * 100, 1) : 0.0];
 }
 
-/** Students enrolled (active) in the programme that a course belongs to — used for marking attendance. */
+/** Students enrolled (active) in the programme that a course belongs to - used for marking attendance. */
 function attendance_students_for_course(int $courseId): array {
     $sql = "SELECT s.* FROM student s
             JOIN enrolment e ON e.student_id = s.student_id

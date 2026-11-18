@@ -1,4 +1,4 @@
-<?php /** @var array $data */ ?>
+﻿<?php /** @var array $data */ ?>
 <div class="d-flex justify-content-between align-items-center mb-3 no-print flex-wrap gap-2">
   <h4 class="mb-0">Results Report</h4>
   <div class="d-flex gap-2"><button onclick="window.print()" class="btn btn-outline-secondary btn-sm"><i class="bi-printer me-1"></i>Print</button>
@@ -26,7 +26,7 @@
               <div class="progress flex-grow-1" style="height:8px"><div class="progress-bar bg-<?= $clr ?>" style="width:<?= $rate ?>%"></div></div>
               <strong class="text-<?= $clr ?>" style="min-width:38px"><?= $rate ?>%</strong>
             </div>
-            <?php else: ?><span class="text-muted">—</span><?php endif; ?>
+            <?php else: ?><span class="text-muted">-</span><?php endif; ?>
           </td>
         </tr>
         <?php endforeach; ?>

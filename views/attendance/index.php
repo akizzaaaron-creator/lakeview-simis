@@ -1,4 +1,4 @@
-<?php /** @var array $records @var array $courses @var int $courseId @var string $date @var int $studentId @var array $ov @var bool $canManage */ ?>
+﻿<?php /** @var array $records @var array $courses @var int $courseId @var string $date @var int $studentId @var array $ov @var bool $canManage */ ?>
 
 <div class="page-header">
   <h4>Attendance</h4>
@@ -34,7 +34,7 @@
         <option value="0">All courses</option>
         <?php foreach ($courses as $c): ?>
           <option value="<?= (int)$c['course_id'] ?>" <?= $courseId === (int)$c['course_id'] ? 'selected' : '' ?>>
-            <?= e($c['course_code']) ?> — <?= e($c['course_name']) ?>
+            <?= e($c['course_code']) ?> - <?= e($c['course_name']) ?>
           </option>
         <?php endforeach; ?>
       </select>
@@ -72,8 +72,8 @@
             </td>
             <td><code><?= e($a['course_code']) ?></code></td>
             <td><?= status_badge($a['status']) ?></td>
-            <td><?= e($a['remarks'] ?: '—') ?></td>
-            <td><small class="text-muted"><?= e($a['recorder'] ?: '—') ?></small></td>
+            <td><?= e($a['remarks'] ?: '-') ?></td>
+            <td><small class="text-muted"><?= e($a['recorder'] ?: '-') ?></small></td>
             <td class="text-end">
               <?php if ($canManage): ?>
               <form method="post"

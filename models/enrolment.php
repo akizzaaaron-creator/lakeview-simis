@@ -1,5 +1,5 @@
-<?php
-/** models/enrolment.php — Enrolment data access (student <-> programme). */
+﻿<?php
+/** models/enrolment.php - Enrolment data access (student <-> programme). */
 
 function enrolment_all(?string $status = null, ?int $programmeId = null): array {
     $sql = "SELECT e.*, s.student_no, s.full_name, p.programme_code, p.programme_name

@@ -1,9 +1,9 @@
-<?php $u = current_user(); ?>
+﻿<?php $u = current_user(); ?>
 
 <div class="page-header">
   <div>
     <h4>Welcome, <?= e($u['full_name']) ?></h4>
-    <span class="text-muted" style="font-size:.85rem"><?= e(ROLES[$u['role']] ?? $u['role']) ?> &middot; <?= e(APP_NAME) ?></span>
+    <span class="text-muted" style="font-size:.85rem"><?= e(ROLES[$u['role']] ?? $u['role']) ?> | <?= e(APP_NAME) ?></span>
   </div>
 </div>
 
@@ -75,7 +75,7 @@
           <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
             <span><?= status_badge($st) ?></span>
             <span class="text-muted" style="font-size:.82rem">
-              <strong><?= (int)$feeMap[$st]['n'] ?></strong> charges &nbsp;&middot;&nbsp;
+              <strong><?= (int)$feeMap[$st]['n'] ?></strong> charges &nbsp;|&nbsp;
               <strong><?= money($feeMap[$st]['total']) ?></strong>
             </span>
           </div>
@@ -100,7 +100,7 @@
             <tbody>
               <?php foreach ($payments as $p): ?>
               <tr>
-                <td><code><?= e($p['reference_no'] ?: '—') ?></code></td>
+                <td><code><?= e($p['reference_no'] ?: '-') ?></code></td>
                 <td><?= e($p['student_no']) ?><br><small class="text-muted"><?= e($p['full_name']) ?></small></td>
                 <td class="text-end fw-semibold text-success"><?= money($p['amount']) ?></td>
                 <td><?= status_badge(str_replace('_', '', $p['payment_method'])) ?></td>

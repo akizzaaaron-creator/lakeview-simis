@@ -1,10 +1,10 @@
-<?php
+﻿<?php
 /**
  * includes/access.php
  * Role-Based Access Control (RBAC).
  *
  * Permissions are enforced on the SERVER SIDE by require_permission() in every
- * controller action. Hiding UI buttons is only a convenience — the server
+ * controller action. Hiding UI buttons is only a convenience - the server
  * guard is authoritative. Administrator always has full access.
  *
  * Permission values per role per module:

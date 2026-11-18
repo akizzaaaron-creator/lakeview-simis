@@ -1,4 +1,4 @@
-<?php /** @var array $assessments @var array $courses @var int $courseId @var bool $canManage */ ?>
+﻿<?php /** @var array $assessments @var array $courses @var int $courseId @var bool $canManage */ ?>
 
 <div class="page-header">
   <h4>Assessments</h4>
@@ -18,7 +18,7 @@
         <option value="0">All courses</option>
         <?php foreach ($courses as $c): ?>
           <option value="<?= (int)$c['course_id'] ?>" <?= $courseId === (int)$c['course_id'] ? 'selected' : '' ?>>
-            <?= e($c['course_code']) ?> — <?= e($c['course_name']) ?>
+            <?= e($c['course_code']) ?> - <?= e($c['course_name']) ?>
           </option>
         <?php endforeach; ?>
       </select>
@@ -49,7 +49,7 @@
             <td><span class="badge bg-secondary"><?= e(strtoupper($a['assessment_type'])) ?></span></td>
             <td class="text-center"><?= (float)$a['max_score'] ?></td>
             <td><?= e(fmt_date($a['date'])) ?></td>
-            <td><?= e($a['academic_year'] ?: '—') ?> / <?= $a['semester'] !== null ? (int)$a['semester'] : '—' ?></td>
+            <td><?= e($a['academic_year'] ?: '-') ?> / <?= $a['semester'] !== null ? (int)$a['semester'] : '-' ?></td>
             <td class="text-end">
               <div class="d-flex gap-1 justify-content-end">
                 <a href="<?= APP_URL ?>/index.php?page=results&action=assessment&id=<?= (int)$a['assessment_id'] ?>"

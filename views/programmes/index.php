@@ -1,4 +1,4 @@
-<?php /** @var array $programmes @var bool $canManage */ ?>
+﻿<?php /** @var array $programmes @var bool $canManage */ ?>
 
 <div class="page-header">
   <h4>Programmes</h4>
@@ -31,7 +31,7 @@
               <br><small class="text-muted"><?= e(mb_strimwidth($p['description'], 0, 60, '…')) ?></small>
               <?php endif; ?>
             </td>
-            <td><?= e($p['duration'] ?: '—') ?></td>
+            <td><?= e($p['duration'] ?: '-') ?></td>
             <td class="text-center"><?= (int)$p['course_count'] ?></td>
             <td class="text-center"><?= (int)$p['enrol_count'] ?></td>
             <td><?= status_badge($p['status']) ?></td>

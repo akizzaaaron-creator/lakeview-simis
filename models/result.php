@@ -1,5 +1,5 @@
-<?php
-/** models/result.php — Result data access (student score on an assessment). */
+﻿<?php
+/** models/result.php - Result data access (student score on an assessment). */
 
 function result_all(?int $studentId = null, ?int $assessmentId = null): array {
     $sql = "SELECT r.*, s.student_no, s.full_name, a.title, a.assessment_type, a.max_score,

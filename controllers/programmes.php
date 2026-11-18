@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 if (!defined('APP_RUNNING')) { http_response_code(403); exit; }
 /**
- * controllers/programmes.php — Programme CRUD.
+ * controllers/programmes.php - Programme CRUD.
  */
 $action = $_GET['action'] ?? 'index';
 $id     = isset($_GET['id']) ? (int)$_GET['id'] : 0;

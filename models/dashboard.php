@@ -1,5 +1,5 @@
-<?php
-/** models/dashboard.php — Aggregate statistics for dashboards. */
+﻿<?php
+/** models/dashboard.php - Aggregate statistics for dashboards. */
 
 function dashboard_stats(): array {
     $stats = [];

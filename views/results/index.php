@@ -1,4 +1,4 @@
-<?php /** @var array $results @var array $courses @var array $students @var int $courseId @var int $studentId @var bool $canManage */ ?>
+﻿<?php /** @var array $results @var array $courses @var array $students @var int $courseId @var int $studentId @var bool $canManage */ ?>
 
 <div class="page-header">
   <h4>Results</h4>
@@ -16,7 +16,7 @@
         <option value="0">All students</option>
         <?php foreach ($students as $st): ?>
           <option value="<?= (int)$st['student_id'] ?>" <?= $studentId === (int)$st['student_id'] ? 'selected' : '' ?>>
-            <?= e($st['student_no']) ?> — <?= e($st['full_name']) ?>
+            <?= e($st['student_no']) ?> - <?= e($st['full_name']) ?>
           </option>
         <?php endforeach; ?>
       </select>
@@ -27,7 +27,7 @@
         <option value="0">All courses</option>
         <?php foreach ($courses as $c): ?>
           <option value="<?= (int)$c['course_id'] ?>" <?= $courseId === (int)$c['course_id'] ? 'selected' : '' ?>>
-            <?= e($c['course_code']) ?> — <?= e($c['course_name']) ?>
+            <?= e($c['course_code']) ?> - <?= e($c['course_name']) ?>
           </option>
         <?php endforeach; ?>
       </select>
@@ -74,7 +74,7 @@
                 <?= e($r['grade']) ?>
               </span>
             </td>
-            <td><small class="text-muted"><?= e($r['remarks'] ?: '—') ?></small></td>
+            <td><small class="text-muted"><?= e($r['remarks'] ?: '-') ?></small></td>
             <td class="text-end">
               <div class="d-flex gap-1 justify-content-end">
                 <a href="<?= APP_URL ?>/index.php?page=results&action=assessment&id=<?= (int)$r['assessment_id'] ?>"

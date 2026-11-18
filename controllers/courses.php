@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 if (!defined('APP_RUNNING')) { http_response_code(403); exit; }
 /**
- * controllers/courses.php — Course CRUD. Each course belongs to one programme.
+ * controllers/courses.php - Course CRUD. Each course belongs to one programme.
  */
 $action = $_GET['action'] ?? 'index';
 $id     = isset($_GET['id']) ? (int)$_GET['id'] : 0;
